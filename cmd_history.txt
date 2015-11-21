@@ -37,4 +37,4 @@ git branch -d BranchName
 git stash
 git stash pop
 git stash apply stash@{0}
-git stash drop
+git stash drop stash@{0}
