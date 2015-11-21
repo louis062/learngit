@@ -6,6 +6,7 @@ ssh-keygen -t rsa -C "youremail@example.com"
 
 git config --global user.name "Your Name"
 git config --global user.email "email@example.com"
+
 git init
 git add filename
 git commit -m "instruction"
@@ -15,10 +16,19 @@ git log --pretty=oneline
 git reflog
 git checkout -- filename
 git reset HEAD filename
+
 git reset --hard CommitID
 git reset --hard HEAD^
 git reset --hard HEAD~1
 git rm filename
+
 git remote add origin https://github.com/louis062/learngit.git
 git push -u origin master(-u : used at the first time)
 git clone https://github.com/louis062/gitskills.git
+
+git branch
+git branch BranchName
+git checkout BranchName
+git checkout -b BranchName
+git merge BranchName
+git branch -d BranchName
