@@ -12,7 +12,7 @@ git add filename
 git commit -m "instruction"
 git status
 git diff (git diff HEAD -- filename)
-git log --pretty=oneline
+git log --graph --pretty=oneline --abbrev-commit
 git reflog
 git checkout -- filename
 git reset HEAD filename
@@ -31,4 +31,10 @@ git branch BranchName
 git checkout BranchName
 git checkout -b BranchName
 git merge BranchName
+git merge --no-ff -m "instruction" BranchName
 git branch -d BranchName
+
+git stash
+git stash pop
+git stash apply stash@{0}
+git stash drop stash@{0}
