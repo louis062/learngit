@@ -1,6 +1,6 @@
 cd /d/GitHome/Repository/learnGit/
-cat filename
-vi filename (i, :wq)
+cat <filename>
+vi <filename> (i, :wq)
 
 ssh-keygen -t rsa -C "youremail@example.com"
 
@@ -8,39 +8,52 @@ git config --global user.name "Your Name"
 git config --global user.email "email@example.com"
 
 git init
-git add filename
+git add <filename>
 git commit -m "instruction"
 git status
 git diff (git diff HEAD -- filename)
 git log --graph --pretty=oneline --abbrev-commit
 git reflog
-git checkout -- filename
-git reset HEAD filename
+git checkout -- <filename>
+git reset HEAD <filename>
 
-git reset --hard CommitID
+git reset --hard <CommitID>
 git reset --hard HEAD^
 git reset --hard HEAD~1
-git rm filename
+git rm <filename>
 
 git remote -v
-git remote add origin https://github.com/louis062/learngit.git
-git push -u origin master
-git push origin dev
-git clone https://github.com/louis062/gitskills.git
+git remote add <host> <url>
+git remote rm <host>
+git push -u <host> <BranchName>
+git push <host> <BranchName>
+git clone <clone_url>
+git clone <clone_url>
 git checkout -b dev origin/dev
 git pull
 git branch --set-upstream dev origin/dev
+git push origin TagName
+git push origin --tags
+git push origin :refs/tags/TagName
 
 git branch
-git branch BranchName
-git checkout BranchName
-git checkout -b BranchName
-git merge BranchName
-git merge --no-ff -m "instruction" BranchName
-git branch -d BranchName
-git branch -D BranchName
+git branch <BranchName>
+git checkout <BranchName>
+git checkout -b <BranchName>
+git merge <BranchName>
+git merge --no-ff -m "instruction" <BranchName>
+git branch -d <BranchName>
+git branch -D <BranchName>
 
 git stash
 git stash pop
-git stash apply stash@{0}
-git stash drop stash@{0}
+git stash apply <stashNo>
+git stash drop <stashNo>
+
+git tag
+git tag <TagName> <CommitID>
+git tag -d <TagName>
+git tag -a <TagName> -m "instruction" <CommitID>
+git tag -s <TagName> -m "instruction" <CommitID>
+git show <TagName>
+
