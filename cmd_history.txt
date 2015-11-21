@@ -22,9 +22,14 @@ git reset --hard HEAD^
 git reset --hard HEAD~1
 git rm filename
 
+git remote -v
 git remote add origin https://github.com/louis062/learngit.git
-git push -u origin master(-u : used at the first time)
+git push -u origin master
+git push origin dev
 git clone https://github.com/louis062/gitskills.git
+git checkout -b dev origin/dev
+git pull
+git branch --set-upstream dev origin/dev
 
 git branch
 git branch BranchName
@@ -33,6 +38,7 @@ git checkout -b BranchName
 git merge BranchName
 git merge --no-ff -m "instruction" BranchName
 git branch -d BranchName
+git branch -D BranchName
 
 git stash
 git stash pop
