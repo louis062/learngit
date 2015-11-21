@@ -1,1 +1,18 @@
 cd /d/GitHome/Repository/learnGit/
+cat filename
+vi filename (i, :wq)
+
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+git init
+git add filename
+git commit -m "instruction"
+git status
+git diff (git diff HEAD -- filename)
+git log --pretty=oneline
+git reflog
+git checkout -- filename
+git reset HEAD filename
+git reset --hard CommitID
+git reset --hard HEAD^
+git reset --hard HEAD~1
